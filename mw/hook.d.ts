@@ -41,7 +41,7 @@ interface Hook<E extends keyof HookEvents> {
      * @param {*} data
      * @chainable
      */
-    fire(data: any): this;
+    fire(...data: Parameters<HookEvents[E]>): this;
 
     /**
      * Unregister a hook handler.
